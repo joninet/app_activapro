@@ -27,6 +27,11 @@ class Entrenador(TimeStampedModel):
         blank=True,
         verbose_name='Biografía'
     )
+    is_active = models.BooleanField(
+        default=False,
+        verbose_name='Activo por Pago',
+        help_text='Indica si el entrenador ha completado el proceso de pago/activación.'
+    )
 
     class Meta:
         db_table = 'entrenador'
